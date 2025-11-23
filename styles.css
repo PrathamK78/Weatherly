@@ -1,10 +1,14 @@
-body{
-    margin: 0;
+html, body{
+    height: 100%;
+    width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: #181818;
+    background-size: cover;
 }
 
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -14,6 +18,7 @@ h1,h3{
 
 .weather-app{
     min-height: 100vh;
+    min-width: 100vw;
     background-image: url(./images/day/clear.jpg);
     background-position: center;
     background-size: cover;
@@ -35,7 +40,15 @@ h1,h3{
     z-index: 0;
 }
 
+.weather-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container{
+    min-height: 100vh;
+    min-width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
@@ -78,7 +91,7 @@ h1,h3{
 .panel{
     position: absolute;
     width: 40%;
-    height: 95%;
+    height: 100%;
     top: 0;
     right: 0;
     background: rgba(0,0,0,0.5);
@@ -164,7 +177,7 @@ h1,h3{
     align-items: center;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 990px){
     .panel, .container{
         position: relative;
         width: 100%;
@@ -172,15 +185,39 @@ h1,h3{
     }
 }
 
-@media screen and (max-width: 500px){
+/*@media screen and (max-width: 500px){
     html{
         font-size: 12px;
     }
-}
+}*/
 
-@media screen and (max-width: 300px){
-    .weather-app{
-        min-height: 40em;
+@media (max-width: 768px) {
+    body{
+        min-width: 200vw;
+        min-height: 200vh;
     }
-
 }
+
+@media (max-width: 768px) {
+    .container {
+    padding: 1px;
+  }
+  .panel {
+      width: 100%;
+      max-width: none;
+    }
+}
+
+@media screen and (min-width: 600px){
+    html{
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+}
+
+
+
+
+
+
+

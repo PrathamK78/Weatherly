@@ -18,7 +18,7 @@ const cities = document.querySelectorAll(".city");
 
 //default city when the page load
 
-let cityInput = "London";
+let cityInput = "Faridabad";
 
 //add click event for each city in the panel
 
@@ -142,7 +142,7 @@ function fetchWeatherData() {
       // icon.src = gifFilename ? `./images/icons/${gifFilename}` : './images/icons/default.gif';
 
 
-      icon.src = "./images/icons/celsius"; //iconId
+      icon.src = "./images/icons/celsius.png"; //iconId
 
       //add the weather details to the page
       cloudOutput.innerHTML = data.current.cloud + "%";
